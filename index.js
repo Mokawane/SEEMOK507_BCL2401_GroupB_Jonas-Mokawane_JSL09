@@ -28,3 +28,11 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         <p>⬇️: R${data.market_data.low_24h.zar}</p>`
     })
     .catch(err => console.error(err))
+
+    // Current time
+    function getCurrentTime() {
+        const date = new Date()
+        document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+    }
+    
+    setInterval(getCurrentTime, 1000)
